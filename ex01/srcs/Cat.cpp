@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 16:31:50 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/13 16:46:37 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/15 18:40:30 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@
 Cat::Cat() : Animal() {
 	std::cout << "Default constructor Cat called" << std::endl;
 	_type = "Cat";
+	_b = new Brain();
 }
 
 //copy
 Cat::Cat(const Cat &copy) : Animal(copy) {
 	std::cout << "Copy Cat called" << std::endl;
+	_b = new Brain(*(copy._b));
 }
 
 //assign
@@ -29,6 +31,9 @@ Cat &Cat::operator=(const Cat &assign) {
 	std::cout << "Operator Cat called" << std::endl;
 	if (this != &assign) {
 		Animal::operator=(assign);
+		if (_b)
+			delete _b;
+		_b = new Brain(*(assign._b));
 	}
 	return *this;
 }
@@ -36,6 +41,7 @@ Cat &Cat::operator=(const Cat &assign) {
 //Destructor
 Cat::~Cat() {
 	std::cout << "Destructor Cat called" << std::endl;
+	delete _b;
 }
 
 //Methods
