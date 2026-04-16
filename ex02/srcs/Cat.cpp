@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 16:31:50 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 11:33:42 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/16 11:51:52 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 
 //Default
-Cat::Cat() : Animal() {
+Cat::Cat() : AAnimal() {
 	std::cout << "Default constructor Cat called" << std::endl;
 	_type = "Cat";
 	_brain = new Brain();
 }
 
 //copy
-Cat::Cat(const Cat &copy) : Animal(copy) {
+Cat::Cat(const Cat &copy) : AAnimal(copy) {
 	std::cout << "Copy Cat called" << std::endl;
 	_brain = new Brain(*(copy._brain));
 }
@@ -30,7 +30,7 @@ Cat::Cat(const Cat &copy) : Animal(copy) {
 Cat &Cat::operator=(const Cat &assign) {
 	std::cout << "Operator Cat called" << std::endl;
 	if (this != &assign) {
-		Animal::operator=(assign);
+		AAnimal::operator=(assign);
 		if (_brain)
 			delete _brain;
 		_brain = new Brain(*(assign._brain));

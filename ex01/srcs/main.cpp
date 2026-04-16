@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 16:19:33 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/15 18:18:42 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/16 11:48:04 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,21 @@
 #include "../headers/Cat.hpp"
 
 int main() {
+	const Animal *j = new Dog();
+	const Animal *i = new Cat();
 
-	
+	Dog fred;
+	Dog *paul = new Dog();
+	Dog *jack = new Dog(*paul);
+	fred.addIdea("Manger des croquettes", 0);
+	Cat lilou;
+	lilou.addIdea("Detruire le canape", 0);
+	lilou.printIdeas();
+	fred.printIdeas();
+	j->makeSound();
+
+	delete j;
+	delete jack;
+	delete paul;
+	delete i;
 }

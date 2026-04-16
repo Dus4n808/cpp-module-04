@@ -1,33 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/01 16:49:31 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 10:38:32 by dufama           ###   ########.fr       */
+/*   Created: 2026/04/01 16:50:07 by dufama            #+#    #+#             */
+/*   Updated: 2026/04/16 11:50:04 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef AAnimal_HPP
+#define AAnimal_HPP
 
 #include <iostream>
-#include "../headers/Animal.hpp"
-#include "../headers/Brain.hpp"
 
-class Dog: public Animal {
-	private:
-		Brain *_brain;
+class AAnimal {
+	protected:
+		std::string _type;
 	public:
-		Dog();
-		Dog(const Dog &copy);
-		Dog &operator=(const Dog &assign);
-		virtual ~Dog();
-		void makeSound(void) const;
-		void printIdeas(void) const;
-		void addIdea(const std::string &idea, int index);
+		AAnimal();
+		AAnimal(const AAnimal &copy);
+		AAnimal &operator=(const AAnimal &assign);
+		virtual ~AAnimal();
+		virtual void makeSound(void) const = 0;
+		void getType(void) const;
 };
+
+
 
 #endif

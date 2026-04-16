@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/13 16:31:50 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 11:33:42 by dufama           ###   ########.fr       */
+/*   Created: 2026/04/13 14:55:22 by dufama            #+#    #+#             */
+/*   Updated: 2026/04/16 11:52:04 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../headers/Cat.hpp"
-
+#include "../headers/Dog.hpp"
 
 //Default
-Cat::Cat() : Animal() {
-	std::cout << "Default constructor Cat called" << std::endl;
-	_type = "Cat";
+Dog::Dog() : AAnimal() {
+	std::cout << "Default constructor Dog called" << std::endl;
+	_type = "Dog";
 	_brain = new Brain();
 }
 
 //copy
-Cat::Cat(const Cat &copy) : Animal(copy) {
-	std::cout << "Copy Cat called" << std::endl;
+Dog::Dog(const Dog &copy) : AAnimal(copy) {
+	std::cout << "Copy Dog called" << std::endl;
 	_brain = new Brain(*(copy._brain));
 }
 
 //assign
-Cat &Cat::operator=(const Cat &assign) {
-	std::cout << "Operator Cat called" << std::endl;
+Dog &Dog::operator=(const Dog &assign) {
+	std::cout << "Operator Dog called" << std::endl;
 	if (this != &assign) {
-		Animal::operator=(assign);
+		AAnimal::operator=(assign);
 		if (_brain)
 			delete _brain;
 		_brain = new Brain(*(assign._brain));
@@ -39,17 +38,17 @@ Cat &Cat::operator=(const Cat &assign) {
 }
 
 //Destructor
-Cat::~Cat() {
-	std::cout << "Destructor Cat called" << std::endl;
+Dog::~Dog() {
+	std::cout << "Destructor Dog called" << std::endl;
 	delete _brain;
 }
 
-//Methods
-void Cat::makeSound(void) const {
-	std::cout << "Meeeeooooowwwwwwwwwwww !!!!!" << std::endl;
+//methods
+void Dog::makeSound(void) const {
+	std::cout << "Wooooouuuuufffffff !!!!" << std::endl;
 }
 
-void Cat::printIdeas(void) const {
+void Dog::printIdeas(void) const {
 	for (int i = 0; i < 100; ++i) {
 		std::string idea = _brain->getIdea(i);
 		if (!idea.empty())
@@ -57,7 +56,7 @@ void Cat::printIdeas(void) const {
 	}
 }
 
-void Cat::addIdea(const std::string &idea, int index) {
+void Dog::addIdea(const std::string &idea, int index) {
 	if (index < 100)
 		_brain->setIdea(idea, index);
 	else

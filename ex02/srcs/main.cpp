@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/01 16:49:31 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 10:38:32 by dufama           ###   ########.fr       */
+/*   Created: 2026/04/13 16:19:33 by dufama            #+#    #+#             */
+/*   Updated: 2026/04/16 11:53:12 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#include "../headers/AAnimal.hpp"
+#include "../headers/Dog.hpp"
+#include "../headers/Cat.hpp"
 
-#include <iostream>
-#include "../headers/Animal.hpp"
-#include "../headers/Brain.hpp"
+int main() {
+	//Erreur
+	//Animal a; class abstract
 
-class Dog: public Animal {
-	private:
-		Brain *_brain;
-	public:
-		Dog();
-		Dog(const Dog &copy);
-		Dog &operator=(const Dog &assign);
-		virtual ~Dog();
-		void makeSound(void) const;
-		void printIdeas(void) const;
-		void addIdea(const std::string &idea, int index);
-};
+	Dog a;
+	a.makeSound();
 
-#endif
+}

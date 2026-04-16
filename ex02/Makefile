@@ -6,7 +6,7 @@
 #    By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/01 16:48:22 by dufama            #+#    #+#              #
-#    Updated: 2026/04/16 09:03:54 by dufama           ###   ########.fr        #
+#    Updated: 2026/04/16 11:52:40 by dufama           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ HEADER_DIR 	= headers
 SRCS_DIR	= srcs
 OBJ_DIR		= obj
 
-SRCS_FILES	= main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+SRCS_FILES	= main.cpp AAnimal.cpp Dog.cpp Cat.cpp Brain.cpp
 SRCS		= $(addprefix $(SRCS_DIR)/, $(SRCS_FILES))
 OBJ			= $(addprefix $(OBJ_DIR)/, $(SRCS_FILES:.cpp=.o))
 CXXFLAGS 	+= -I $(HEADER_DIR)

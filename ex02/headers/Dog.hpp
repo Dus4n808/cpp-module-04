@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/01 16:49:31 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 10:38:32 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/16 11:51:20 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 #define DOG_HPP
 
 #include <iostream>
-#include "../headers/Animal.hpp"
+#include "../headers/AAnimal.hpp"
 #include "../headers/Brain.hpp"
 
-class Dog: public Animal {
+class Dog: public AAnimal {
 	private:
 		Brain *_brain;
 	public:
