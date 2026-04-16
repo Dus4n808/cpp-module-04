@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 12:03:22 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 12:05:57 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/16 20:52:26 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,20 @@
 #include <iostream>
 #include <string>
 
+class ICharacter;
+
 class AMateria {
 	protected:
-		//to add
+		std::string _type;
 	public:
 		AMateria(std::string const &type);
+		AMateria(const AMateria &copy);
+		AMateria & operator=(const AMateria &assing);
+		virtual ~AMateria();
+
 		std::string const &getType() const;
 		virtual AMateria *clone() const = 0;
-		virtual void use()
-}
+		virtual void use(ICharacter &target);
+};
 
 #endif

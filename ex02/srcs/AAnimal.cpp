@@ -38,11 +38,6 @@ AAnimal::~AAnimal() {
 
 //methods
 
-void AAnimal::makeSound(void) const {
-	std::cout << "AAnimal Sound" << std::endl;
-}
-
-
 void AAnimal::getType(void) const {
 	std::cout << _type << std::endl;
 }
