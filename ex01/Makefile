@@ -6,13 +6,13 @@
 #    By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/01 16:48:22 by dufama            #+#    #+#              #
-#    Updated: 2026/04/16 09:03:54 by dufama           ###   ########.fr        #
+#    Updated: 2026/04/16 12:01:30 by dufama           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= exec
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra  -std=c++98
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 HEADER_DIR 	= headers
 SRCS_DIR	= srcs
