@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 18:08:37 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/18 18:45:53 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/18 18:49:27 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void MateriaSource::learnMateria(AMateria *m) {
 			std::cout << "Template full" << std::endl;
 		}
 	}
+	delete m;
 }
 
 AMateria* MateriaSource::createMateria(std::string const &type) {
