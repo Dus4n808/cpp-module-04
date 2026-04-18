@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 19:05:32 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 20:53:38 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/18 17:57:23 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define ICE_HPP
 
 #include "../headers/AMateria.hpp"
+
+class ICharacter;
 
 class Ice : public AMateria {
 	public:

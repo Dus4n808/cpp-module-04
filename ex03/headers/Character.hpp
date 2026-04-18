@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 20:05:51 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 20:17:02 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/18 17:42:38 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define CHARACTER_HPP
 
 #include "../headers/ICharacter.hpp"
+#include "../headers/AMateria.hpp"
 
 class Character : public ICharacter {
 	private:

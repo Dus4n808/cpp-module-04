@@ -6,11 +6,12 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 20:16:06 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 20:46:44 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/18 18:38:26 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/Character.hpp"
+#include "../headers/ICharacter.hpp"
 
 //Default
 Character::Character(std::string const &name) : _name(name) {
@@ -59,11 +60,14 @@ std::string const & Character::getName() const {
 }
 
 void Character::equip(AMateria *m) {
-	for (int i = 0; i < 4; i++) {
-		if (_inventory[i] == NULL)
+	int i;
+	for (i = 0; i < 4; i++) {
+		if (_inventory[i] == NULL) {
 			_inventory[i] = m;
-		break;
+			break;
+		}
 	}
+	std::cout << _name << " : equip the " << m->getType() << " at idx " << i << std::endl;
 }
 
 void Character::unequip(int idx) {
@@ -78,4 +82,6 @@ void Character::use(int idx, ICharacter &target) {
 		return ;
 	if (_inventory[idx] != NULL)
 		_inventory[idx]->use(target);
+	else
+		std::cout << "You have nothing, you can't attack" << std::endl;
 }
