@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 16:19:33 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 11:48:04 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/22 11:12:53 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ int main() {
 	lilou.printIdeas();
 	fred.printIdeas();
 	j->makeSound();
+
+	Dog basic;
+	Dog tmp = basic;
+
 
 	delete j;
 	delete jack;
