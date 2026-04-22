@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:19:21 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 11:32:44 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/22 13:49:36 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 //Default
 Brain::Brain() {
 	std::cout << "Default constructor Brain called" << std::endl;
-	ideas = new std::string[100];
+	_ideas = new std::string[100];
 }
 
 //copy
 Brain::Brain(const Brain &copy) {
 	std::cout << "Copy constructor Brain called" << std::endl;
-	ideas = new std::string[100];
+	_ideas = new std::string[100];
 	for (int i = 0; i < 100; ++i)
-		ideas[i] = copy.ideas[i];
+		_ideas[i] = copy._ideas[i];
 }
 
 //assgin
@@ -31,7 +31,7 @@ Brain &Brain::operator=(const Brain &assign) {
 	std::cout << "Assign operator Brain called" << std::endl;
 	if (this != &assign) {
 		for (int i = 0; i < 100; ++i)
-			ideas[i] = assign.ideas[i];
+			_ideas[i] = assign._ideas[i];
 	}
 	return *this;
 }
@@ -39,16 +39,16 @@ Brain &Brain::operator=(const Brain &assign) {
 //Destructor
 Brain::~Brain() {
 	std::cout << "Destructor Brain called" << std::endl;
-	delete[] ideas;
+	delete[] _ideas;
 }
 
 //Methods
 void Brain::setIdea(const std::string &idea, int index) {
-	ideas[index] = idea;
+	_ideas[index] = idea;
 }
 
 std::string Brain::getIdea(int index) const {
-	return ideas[index];
+	return _ideas[index];
 }
 
 

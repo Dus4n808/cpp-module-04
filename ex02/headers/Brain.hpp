@@ -6,7 +6,7 @@
 /*   By: dufama <dufama@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 17:00:27 by dufama            #+#    #+#             */
-/*   Updated: 2026/04/16 11:52:19 by dufama           ###   ########.fr       */
+/*   Updated: 2026/04/22 13:49:24 by dufama           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 #include "../headers/AAnimal.hpp"
 
 class Brain {
+	private:
+		std::string *_ideas;
 	public:
-		std::string *ideas;
 		Brain();
 		Brain(const Brain &copy);
 		Brain &operator=(const Brain &assign);
